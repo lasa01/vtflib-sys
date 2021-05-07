@@ -15,14 +15,6 @@ macro_rules! assert_success {
 }
 
 #[test]
-fn initialize_shutdown() {
-    unsafe {
-        assert_success!(vlInitialize());
-        vlShutdown();
-    }
-}
-
-#[test]
 fn create_save_image() {
     unsafe {
         assert_success!(vlInitialize());
