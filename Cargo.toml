@@ -3,7 +3,6 @@ name = "vtflib-sys"
 description = "FFI bindings for VTFLib.\n\nVTFLib is automatically built and linked statically. Requires cmake and a C++ compiler."
 readme = "README.md"
 categories = [ "external-ffi-bindings", "multimedia::images" ]
-include = ["/src/*.rs", "/vendor/src/**/*", "/vendor/CMakeLists.txt", "/vendor/*.in", "/Cargo.toml", "/build.rs", "/README.md"]
 keywords = ["vtf", "vtflib"]
 repository = "https://github.com/lasa01/vtflib-sys.git"
 license = "LGPL-2.1-or-later"
