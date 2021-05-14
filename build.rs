@@ -1,6 +1,11 @@
 use std::env;
 
 fn main() {
+    // no need to build/find anything for docs
+    if env::var("DOCS_RS").is_ok() {
+        return;
+    }
+
     println!("cargo:rerun-if-changed=vendor");
     println!("cargo:rerun-if-env-changed=VTFLIB_STATIC");
     println!("cargo:rerun-if-env-changed=VTFLIB_PATH");
