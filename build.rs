@@ -51,4 +51,5 @@ fn build_static() {
 
     println!("cargo:rustc-link-search=native={}", dest.display());
     println!("cargo:rustc-link-lib=static=VTFLib13");
+    println!("cargo:rustc-link-lib=dylib=stdc++");
 }
