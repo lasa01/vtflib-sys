@@ -7,7 +7,7 @@ keywords = ["vtf", "vtflib"]
 repository = "https://github.com/lasa01/vtflib-sys.git"
 license = "MIT OR Apache-2.0"
 links = "VTFLib"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["Lassi Säike"]
 edition = "2018"
 
