@@ -28,7 +28,11 @@ fn main() {
     let mut pkg = pkg_config::Config::new();
     pkg.statik(statik);
     pkg.atleast_version("1.3.2");
-    if pkg.probe("VTFLib13").or_else(|_| pkg.probe("VTFLib")).is_err() {
+    if pkg
+        .probe("VTFLib13")
+        .or_else(|_| pkg.probe("VTFLib"))
+        .is_err()
+    {
         if statik {
             build_static();
         } else {
