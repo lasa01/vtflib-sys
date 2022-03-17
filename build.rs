@@ -57,6 +57,12 @@ fn build_static() {
     println!("cargo:rustc-link-lib=static=VTFLib13");
 
     if cfg!(unix) {
-        println!("cargo:rustc-link-lib=dylib=stdc++");
+        let library_name = if cfg!(target_os = "macos") {
+            "c++"
+        } else {
+            "stdc++"
+        };
+
+        println!("cargo:rustc-link-lib=dylib={}", library_name);
     }
 }
