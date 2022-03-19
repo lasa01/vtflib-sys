@@ -51,9 +51,13 @@ fn build_static() {
     build_config.define("USE_LIBTXC_DXTN", "OFF");
     build_config.define("USE_NVDXT", "OFF");
 
-    let dest = build_config.build().join("lib");
+    let dest = build_config.build();
 
-    println!("cargo:rustc-link-search=native={}", dest.display());
+    let lib_dest = dest.join("lib");
+    let lib64_dest = dest.join("lib64");
+
+    println!("cargo:rustc-link-search=native={}", lib_dest.display());
+    println!("cargo:rustc-link-search=native={}", lib64_dest.display());
     println!("cargo:rustc-link-lib=static=VTFLib13");
 
     if cfg!(unix) {
